@@ -25,7 +25,7 @@ interface AnalyticsData {
   raw_data: SensorDataRow[];
 }
 
-const API_URL = 'http://127.0.0.1:8000/api/v1/analytics';
+const API_URL = import.meta.env.VITE_API_URL || 'http://127.0.0.1:8000/api/v1/analytics';
 
 function App() {
   // State is now typed: it can be AnalyticsData or null
